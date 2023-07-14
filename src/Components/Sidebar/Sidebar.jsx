@@ -1,9 +1,11 @@
 import React from 'react'
 import logo from './AppLogo2.png'
-import { Divider} from '@mui/material'
+import { Divider, IconButton, Tooltip } from '@mui/material'
 import BasicMenu from './SizeMenu';
 import FontMenu from './FontMenu';
 import TypeMenu from './TypeMenu'
+import ShareRoundedIcon from '@mui/icons-material/ShareRounded';
+import { RWebShare } from "react-web-share";
 
 const Sidebar = () => {
     return (
@@ -25,15 +27,24 @@ const Sidebar = () => {
             <BasicMenu />
             <FontMenu />
             <TypeMenu />
-           
-            {/* <Tooltip title="Delete history" placement="left" >
+            <RWebShare
+                data={{
+                    text: "check kr le mst web app hai typing ke liye!",
+                    url: `https://master--typing-ka-kida.netlify.app`,
+                    title: "Typing ka kida",
+                }}
+                onClick={() => console.log("shared successfully!")}
+            >
 
-                <IconButton style={{
-                    color: 'rgba(255, 255, 255, 0.5)'
-                }} >
-                    <AutoDeleteRoundedIcon />
-                </IconButton>
-            </Tooltip> */}
+                <Tooltip title="Share bhi kr de" placement="left" >
+
+                    <IconButton style={{
+                        color: 'rgba(255, 255, 255, 0.5)'
+                    }} >
+                        <ShareRoundedIcon />
+                    </IconButton>
+                </Tooltip>
+            </RWebShare>
         </div>
     )
 }
