@@ -174,17 +174,6 @@ const Container = () => {
     }
 
 
-    const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
-
-    function padTo2Digits(num) {
-        return num.toString().padStart(2, '0');
-    }
-
-    const formatDate = (date) => {
-        const newDate = new Date(date);
-        return `${padTo2Digits(newDate.getDate())} ${months[newDate.getMonth()]} ${newDate.getFullYear()}`
-    }
-
 
     const checkAgo = (time) => {
         if (time <= 24) {
