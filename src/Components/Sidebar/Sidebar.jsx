@@ -30,7 +30,7 @@ const Sidebar = () => {
             <RWebShare
                 data={{
                     text: "check kr le mst web app hai typing ke liye!",
-                    url: `https://master--typing-ka-kida.netlify.app`,
+                    url: `https://typing-ka-kida.netlify.app/`,
                     title: "Typing ka kida",
                 }}
                 onClick={() => console.log("shared successfully!")}
