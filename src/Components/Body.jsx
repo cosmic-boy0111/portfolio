@@ -50,7 +50,6 @@ const Body = () => {
         const _programmingArray = JSON.parse(localStorage.getItem('programmingArray'));
         const _sentenceType = JSON.parse(localStorage.getItem('sentenceType'))
         const _normalType = JSON.parse(localStorage.getItem('normalType'))
-        const _historyArray = JSON.parse(localStorage.getItem('historyArray'))
 
         _fontSize ? setFontSize(_fontSize) : setFontSize(18);
         _lineHeight ? setLineHeight(_lineHeight) : setLineHeight(3);
