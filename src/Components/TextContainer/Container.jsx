@@ -112,6 +112,7 @@ const Container = () => {
                 getSentence() : getPara()
         );
         setInputText("")
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [random, words, programmingArray, sentenceType, normalType])
     
 
