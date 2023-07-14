@@ -31,7 +31,7 @@ const Body = () => {
     ];
 
     const [fontSize, setFontSize] = useState(18)
-    const [lineHeight, setLineHeight] = useState(3)
+    const [lineHeight, setLineHeight] = useState(1)
     const [words, setWords] = useState(10);
     const [random, setRandom] = useState(true);
     const [fontStyle, setFontStyle] = useState('Source Code Pro');
@@ -52,7 +52,7 @@ const Body = () => {
         const _normalType = JSON.parse(localStorage.getItem('normalType'))
 
         _fontSize ? setFontSize(_fontSize) : setFontSize(18);
-        _lineHeight ? setLineHeight(_lineHeight) : setLineHeight(3);
+        _lineHeight ? setLineHeight(_lineHeight) : setLineHeight(1);
         _words ? setWords(_words) : setWords(10);
         _random !== null ? setRandom(_random) : setRandom(true);
         _fontStyle ? setFontStyle(_fontStyle) : setFontStyle('Source Code Pro');
