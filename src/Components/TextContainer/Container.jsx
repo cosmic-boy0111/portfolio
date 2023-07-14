@@ -219,6 +219,7 @@ const Container = () => {
         }} >
             {/* <AlertDialog open={open} setOpen={setOpen} progress={progress} time={ Math.round(actualSentence.split(' ').length / (time / 60))} /> */}
             <div ref={divRef} style={{
+                width:'100%',
                 color: "rgba(255, 255, 255, 0.5)",
                 fontSize: `${fontSize}px`,
                 display: 'flex',
@@ -226,7 +227,8 @@ const Container = () => {
                 height: "95%",
                 overflowY: 'scroll',
                 paddingBottom: `${lineHeight + 8}rem`,
-                fontFamily: `${fontStyle}`
+                fontFamily: `${fontStyle}`,
+                wordWrap : 'break-word'
                 // flexDirection:'column-reverse'
             }} >
                 {
@@ -241,7 +243,8 @@ const Container = () => {
                                 display: 'flex',
                                 flexDirection: 'column',
                                 lineHeight: `${lineHeight}.3em`,
-
+                                wordWrap:'break-word',
+                                width: '90%',
                             }} >
                                 {e.sentence}
 
@@ -255,7 +258,8 @@ const Container = () => {
                     })
                 }
                 <div style={{
-                    display: 'flex',
+                    width:'90%',
+                    wordWrap:'break-word'
                 }} >
 
                     {sentence}
@@ -275,7 +279,7 @@ const Container = () => {
                     };
                 }}
                 style={{
-                    width: '100%',
+                    width: '90%',
                     height: '8%',
                     resize: 'none',
                     backgroundColor: 'transparent',
